@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 1* -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.com.epam/trjava/treasures/treasures"
+	xmlns:trsns="http://www.com.epam/trjava/treasures/treasures"
+	xmlns:antiques="http://www.com.epam/trjava/treasures/antiques"
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<!-- 2* -->
+	<xsd:import namespace="http://www.com.epam/trjava/treasures/antiques"
+		schemaLocation="antiques.xsd" />
+
+	<xsd:complexType name="treasureType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<!-- 3* -->
+			<xsd:element name="antiques" type="antiques:antiquesType"></xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:element name="treasures" type="trsns:treasureType"></xsd:element>
+
+</xsd:schema>
+
+<!--1* after attribute: "xmlns:antiques="http://com/epam/trjava/treasures/antiques" 
+	add your types of entities with unique namespace (xmlns:'UNIQUENAMESPACE'="nameSpaceInFormatHere") -->
+<!-- 2* - add your import with unique namespace link and file-->
+<!-- 3* - inside complex type set your type -->

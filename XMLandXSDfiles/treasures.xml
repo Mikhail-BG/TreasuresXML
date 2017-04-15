@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<treasures xmlns="http://www.com.epam/trjava/treasures/treasures"
+	xmlns:antiques="http://www.com.epam/trjava/treasures/antiques"
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation="http://www.com.epam/trjava/treasures/treasures treasures.xsd">
+
+	<antiques>
+		<!--10 statues -->
+		<antiques:statue antiques:id="101">
+			<antiques:name>Petit Julien</antiques:name>
+			<antiques:type>mannerism</antiques:type>
+			<antiques:master>Jerome Duquesnoy l'Ancien</antiques:master>
+			<antiques:creationdate>12.12.1619</antiques:creationdate>
+			<antiques:price>200</antiques:price>
+			<antiques:weight>1</antiques:weight>
+			<antiques:size>2</antiques:size>
+		</antiques:statue>
+
+		<antiques:statue antiques:id="102">
+			<antiques:name>Le Penseur</antiques:name>
+			<antiques:type>realism</antiques:type>
+			<antiques:master>Francois-Auguste-Rene Rodin</antiques:master>
+			<antiques:creationdate>04.02.1882</antiques:creationdate>
+			<antiques:price>200</antiques:price>
+			<antiques:weight>1</antiques:weight>
+			<antiques:size>2</antiques:size>
+		</antiques:statue>
+
+		<!--11 pictures -->
+		<antiques:picture antiques:id="111">
+			<antiques:name>La Danse</antiques:name>
+			<antiques:type>impressionism</antiques:type>
+			<antiques:master>Henri Matisse</antiques:master>
+			<antiques:creationdate>05.06.1910</antiques:creationdate>
+			<antiques:price>300</antiques:price>
+			<antiques:quality>good</antiques:quality>
+			<antiques:painttype>oils</antiques:painttype>
+		</antiques:picture>
+
+		<antiques:picture antiques:id="112">
+			<antiques:name>Garden of Earthly Delights</antiques:name>
+			<antiques:type>renaissance</antiques:type>
+			<antiques:master>Jheronimus Bosch</antiques:master>
+			<antiques:creationdate>15.10.1515</antiques:creationdate>
+			<antiques:price>300</antiques:price>
+			<antiques:quality>good</antiques:quality>
+			<antiques:painttype>oils</antiques:painttype>
+		</antiques:picture>
+	</antiques>
+
+</treasures>
