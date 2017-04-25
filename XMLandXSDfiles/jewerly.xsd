@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.com.epam/trjava/treasures/jewerly"
+	xmlns:tns="http://www.com.epam/trjava/treasures/jewerly"
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<xsd:complexType name="jewCommonType">
+		<xsd:sequence>
+			<xsd:element name="price" type="xsd:int"></xsd:element>
+			<xsd:element name="material" type="xsd:string"></xsd:element>
+			<xsd:element name="weight" type="xsd:int"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:int" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="jewelType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="type" type="xsd:string"></xsd:element>
+					<xsd:element name="diameter" type="xsd:int"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="ringType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="style" type="xsd:string"></xsd:element>
+					<xsd:element name="stone" type="xsd:boolean"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="braceletType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="span" type="xsd:string"></xsd:element>
+					<xsd:element name="style" type="xsd:string"></xsd:element>
+					<xsd:element name="ridgity" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="chainType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="length" type="xsd:int"></xsd:element>
+					<xsd:element name="thickness" type="xsd:int"></xsd:element>
+					<xsd:element name="locktype" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="sandglassType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="sand" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="beadsType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="length" type="xsd:int"></xsd:element>
+					<xsd:element name="thickness" type="xsd:int"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="pendantType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="size" type="xsd:string"></xsd:element>
+					<xsd:element name="img" type="xsd:boolean"></xsd:element>
+					<xsd:element name="shape" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="gobletType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:jewCommonType">
+				<xsd:sequence>
+					<xsd:element name="volume" type="xsd:int"></xsd:element>
+					<xsd:element name="height" type="xsd:int"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="jewerlyType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="jewel" type="tns:jewelType" minOccurs="0"
+				maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="ring" type="tns:ringType" minOccurs="0"
+				maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="bracelet" type="tns:braceletType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="chain" type="tns:chainType" minOccurs="0"
+				maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="sandglass" type="tns:sandglassType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="beads" type="tns:beadsType" minOccurs="0"
+				maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="pendant" type="tns:pendantType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="goblet" type="tns:gobletType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:element name="jewerly" type="tns:jewerlyType"></xsd:element>
+
+</xsd:schema>

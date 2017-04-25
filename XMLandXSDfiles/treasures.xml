@@ -1,51 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <treasures xmlns="http://www.com.epam/trjava/treasures/treasures"
+
+	xmlns:jewerly="http://www.com.epam/trjava/treasures/jewerly"
 	xmlns:antiques="http://www.com.epam/trjava/treasures/antiques"
+	xmlns:apparel="http://www.com.epam/trjava/treasures/apparel"
+	xmlns:princess="http://www.com.epam/trjava/treasures/princess"
+
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:schemaLocation="http://www.com.epam/trjava/treasures/treasures treasures.xsd">
 
+	<jewerly>
+		<!--01 jewels -->
+		<jewerly:jewel jewerly:id="011">
+			<jewerly:price>10</jewerly:price>
+			<jewerly:material>agate</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:type>semiprecious</jewerly:type>
+			<jewerly:diameter>1</jewerly:diameter>
+		</jewerly:jewel>
+
+		<jewerly:jewel jewerly:id="012">
+			<jewerly:price>15</jewerly:price>
+			<jewerly:material>diamond</jewerly:material>
+			<jewerly:weight>1</jewerly:weight>
+			<jewerly:type>moissanite</jewerly:type>
+			<jewerly:diameter>1</jewerly:diameter>
+		</jewerly:jewel>
+
+		<!--02 rings -->
+		<jewerly:ring jewerly:id="021">
+			<jewerly:price>5</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>1</jewerly:weight>
+			<jewerly:style>precious</jewerly:style>
+			<jewerly:stone>true</jewerly:stone>
+		</jewerly:ring>
+
+		<jewerly:ring jewerly:id="022">
+			<jewerly:price>7</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:style>precious</jewerly:style>
+			<jewerly:stone>true</jewerly:stone>
+		</jewerly:ring>
+
+		<!--03 bracelets -->
+		<jewerly:bracelet jewerly:id="031">
+			<jewerly:price>7</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:span>precious</jewerly:span>
+			<jewerly:style>precious</jewerly:style>
+			<jewerly:ridgity>100</jewerly:ridgity>
+		</jewerly:bracelet>
+
+		<!--04 chains -->
+		<jewerly:chain jewerly:id="041">
+			<jewerly:price>7</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:length>5</jewerly:length>
+			<jewerly:thickness>10</jewerly:thickness>
+			<jewerly:locktype>100</jewerly:locktype>
+		</jewerly:chain>
+
+		<!--05 sand-glasses -->
+		<jewerly:sandglass jewerly:id="051">
+			<jewerly:price>17</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:sand>good</jewerly:sand>
+		</jewerly:sandglass>
+
+		<!--06 beads -->
+		<jewerly:beads jewerly:id="061">
+			<jewerly:price>7</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:length>3</jewerly:length>
+			<jewerly:thickness>3</jewerly:thickness>
+		</jewerly:beads>
+
+		<!--07 pendants -->
+		<jewerly:pendant jewerly:id="071">
+			<jewerly:price>15</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:size>XL</jewerly:size>
+			<jewerly:img>false</jewerly:img>
+			<jewerly:shape>fantastic</jewerly:shape>
+		</jewerly:pendant>
+
+		<!--08 goblets -->
+		<jewerly:goblet jewerly:id="061">
+			<jewerly:price>25</jewerly:price>
+			<jewerly:material>gold</jewerly:material>
+			<jewerly:weight>2</jewerly:weight>
+			<jewerly:volume>3</jewerly:volume>
+			<jewerly:height>6</jewerly:height>
+		</jewerly:goblet>
+
+	</jewerly>
+
 	<antiques>
+		<!--09 vases -->
+		<antiques:vase antiques:id="091">
+			<antiques:price>100</antiques:price>
+			<antiques:title>Greek Vase</antiques:title>
+			<antiques:type>impressionism</antiques:type>
+			<antiques:volume>1</antiques:volume>
+			<antiques:img>true</antiques:img>
+		</antiques:vase>
+
+		<antiques:vase antiques:id="092">
+			<antiques:price>150</antiques:price>
+			<antiques:title>Chinese Vase</antiques:title>
+			<antiques:type>mannerism</antiques:type>
+			<antiques:volume>2</antiques:volume>
+			<antiques:img>true</antiques:img>
+		</antiques:vase>
+
 		<!--10 statues -->
 		<antiques:statue antiques:id="101">
-			<antiques:name>Petit Julien</antiques:name>
+			<antiques:price>200</antiques:price>
+			<antiques:title>Petit Julien</antiques:title>
 			<antiques:type>mannerism</antiques:type>
 			<antiques:master>Jerome Duquesnoy l'Ancien</antiques:master>
 			<antiques:creationdate>12.12.1619</antiques:creationdate>
-			<antiques:price>200</antiques:price>
 			<antiques:weight>1</antiques:weight>
 			<antiques:size>2</antiques:size>
 		</antiques:statue>
 
 		<antiques:statue antiques:id="102">
-			<antiques:name>Le Penseur</antiques:name>
+			<antiques:price>200</antiques:price>
+			<antiques:title>Le Penseur</antiques:title>
 			<antiques:type>realism</antiques:type>
 			<antiques:master>Francois-Auguste-Rene Rodin</antiques:master>
 			<antiques:creationdate>04.02.1882</antiques:creationdate>
-			<antiques:price>200</antiques:price>
 			<antiques:weight>1</antiques:weight>
 			<antiques:size>2</antiques:size>
 		</antiques:statue>
 
 		<!--11 pictures -->
 		<antiques:picture antiques:id="111">
-			<antiques:name>La Danse</antiques:name>
+			<antiques:price>300</antiques:price>
+			<antiques:title>La Danse</antiques:title>
 			<antiques:type>impressionism</antiques:type>
 			<antiques:master>Henri Matisse</antiques:master>
 			<antiques:creationdate>05.06.1910</antiques:creationdate>
-			<antiques:price>300</antiques:price>
+			<antiques:paint>oils</antiques:paint>
 			<antiques:quality>good</antiques:quality>
-			<antiques:painttype>oils</antiques:painttype>
 		</antiques:picture>
 
 		<antiques:picture antiques:id="112">
-			<antiques:name>Garden of Earthly Delights</antiques:name>
+			<antiques:price>300</antiques:price>
+			<antiques:title>Garden of Earthly Delights</antiques:title>
 			<antiques:type>renaissance</antiques:type>
 			<antiques:master>Jheronimus Bosch</antiques:master>
 			<antiques:creationdate>15.10.1515</antiques:creationdate>
-			<antiques:price>300</antiques:price>
+			<antiques:paint>oils</antiques:paint>
 			<antiques:quality>good</antiques:quality>
-			<antiques:painttype>oils</antiques:painttype>
 		</antiques:picture>
 	</antiques>
+
+	<apparel>
+		<!--19 helmets -->
+		<apparel:helmet apparel:id="191">
+			<apparel:price>10</apparel:price>
+			<apparel:title>perfect</apparel:title>
+			<apparel:material>iron</apparel:material>
+			<apparel:type>semiprecious</apparel:type>
+			<apparel:headSafe>5</apparel:headSafe>
+			<apparel:headSize>XS</apparel:headSize>
+		</apparel:helmet>
+
+		<!--20 scapulars -->
+		<apparel:scapular apparel:id="201">
+			<apparel:price>10</apparel:price>
+			<apparel:title>perfect</apparel:title>
+			<apparel:material>iron</apparel:material>
+			<apparel:type>semiprecious</apparel:type>
+			<apparel:bodySafe>5</apparel:bodySafe>
+			<apparel:shoulderSize>XS</apparel:shoulderSize>
+		</apparel:scapular>
+
+		<!--21 outfitss -->
+		<apparel:outfit apparel:id="211">
+			<apparel:price>10</apparel:price>
+			<apparel:title>perfect</apparel:title>
+			<apparel:material>iron</apparel:material>
+			<apparel:type>semiprecious</apparel:type>
+			<apparel:bodySafe>5</apparel:bodySafe>
+			<apparel:bodySize>XS</apparel:bodySize>
+		</apparel:outfit>
+
+		<!--22 pants -->
+		<apparel:pants apparel:id="221">
+			<apparel:price>10</apparel:price>
+			<apparel:title>perfect</apparel:title>
+			<apparel:material>iron</apparel:material>
+			<apparel:type>semiprecious</apparel:type>
+			<apparel:legSafe>15</apparel:legSafe>
+			<apparel:legSize>XL</apparel:legSize>
+		</apparel:pants>
+
+		<!--23 boots -->
+		<apparel:boot apparel:id="231">
+			<apparel:price>10</apparel:price>
+			<apparel:title>perfect</apparel:title>
+			<apparel:material>iron</apparel:material>
+			<apparel:type>semiprecious</apparel:type>
+			<apparel:legSafe>15</apparel:legSafe>
+			<apparel:pesSize>XXL</apparel:pesSize>
+		</apparel:boot>
+
+	</apparel>
+
+	<princess>
+		<!--32 princess -->
+		<princess:princes princess:id="321">
+			<princess:age>20</princess:age>
+			<princess:name>perfect</princess:name>
+			<princess:damnation>iron</princess:damnation>
+			<princess:birthPlace>iron</princess:birthPlace>
+		</princess:princes>
+
+	</princess>
 
 </treasures>

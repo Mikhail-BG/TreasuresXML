@@ -6,19 +6,30 @@
 
 	<xsd:complexType name="antCommonType">
 		<xsd:sequence>
-			<xsd:element name="name" type="xsd:string"></xsd:element>
-			<xsd:element name="type" type="xsd:string"></xsd:element>
-			<xsd:element name="master" type="xsd:string"></xsd:element>
-			<xsd:element name="creationdate" type="xsd:string"></xsd:element>
 			<xsd:element name="price" type="xsd:int"></xsd:element>
+			<xsd:element name="title" type="xsd:string"></xsd:element>
+			<xsd:element name="type" type="xsd:string"></xsd:element>
 		</xsd:sequence>
 		<xsd:attribute name="id" type="xsd:int" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="vaseType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:antCommonType">
+				<xsd:sequence>
+					<xsd:element name="volume" type="xsd:int"></xsd:element>
+					<xsd:element name="img" type="xsd:boolean"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="statueType">
 		<xsd:complexContent>
 			<xsd:extension base="tns:antCommonType">
 				<xsd:sequence>
+					<xsd:element name="master" type="xsd:string"></xsd:element>
+					<xsd:element name="creationdate" type="xsd:string"></xsd:element>
 					<xsd:element name="weight" type="xsd:int"></xsd:element>
 					<xsd:element name="size" type="xsd:double"></xsd:element>
 				</xsd:sequence>
@@ -30,8 +41,10 @@
 		<xsd:complexContent>
 			<xsd:extension base="tns:antCommonType">
 				<xsd:sequence>
+					<xsd:element name="master" type="xsd:string"></xsd:element>
+					<xsd:element name="creationdate" type="xsd:string"></xsd:element>
+					<xsd:element name="paint" type="xsd:string"></xsd:element>
 					<xsd:element name="quality" type="xsd:string"></xsd:element>
-					<xsd:element name="painttype" type="xsd:string"></xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -39,6 +52,8 @@
 
 	<xsd:complexType name="antiquesType">
 		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="vase" type="tns:vaseType" minOccurs="0"
+				maxOccurs="unbounded"></xsd:element>
 			<xsd:element name="statue" type="tns:statueType"
 				minOccurs="0" maxOccurs="unbounded"></xsd:element>
 			<xsd:element name="picture" type="tns:pictureType"

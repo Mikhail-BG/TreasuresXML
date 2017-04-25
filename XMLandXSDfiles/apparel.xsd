@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.com.epam/trjava/treasures/apparel"
+	xmlns:tns="http://www.com.epam/trjava/treasures/apparel"
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<xsd:complexType name="appCommonType">
+		<xsd:sequence>
+			<xsd:element name="price" type="xsd:int"></xsd:element>
+			<xsd:element name="title" type="xsd:string"></xsd:element>
+			<xsd:element name="material" type="xsd:string"></xsd:element>
+			<xsd:element name="type" type="xsd:string"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:int" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="helmetType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:appCommonType">
+				<xsd:sequence>
+					<xsd:element name="headSafe" type="xsd:int"></xsd:element>
+					<xsd:element name="headSize" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="scapularType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:appCommonType">
+				<xsd:sequence>
+					<xsd:element name="bodySafe" type="xsd:int"></xsd:element>
+					<xsd:element name="shoulderSize" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="outfitType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:appCommonType">
+				<xsd:sequence>
+					<xsd:element name="bodySafe" type="xsd:int"></xsd:element>
+					<xsd:element name="bodySize" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="pantsType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:appCommonType">
+				<xsd:sequence>
+					<xsd:element name="legSafe" type="xsd:int"></xsd:element>
+					<xsd:element name="legSize" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="bootType">
+		<xsd:complexContent>
+			<xsd:extension base="tns:appCommonType">
+				<xsd:sequence>
+					<xsd:element name="legSafe" type="xsd:int"></xsd:element>
+					<xsd:element name="pesSize" type="xsd:string"></xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="apparelType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="helmet" type="tns:helmetType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="scapular" type="tns:scapularType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="outfit" type="tns:outfitType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="pants" type="tns:pantsType" minOccurs="0"
+				maxOccurs="unbounded"></xsd:element>
+			<xsd:element name="boot" type="tns:bootType" minOccurs="0"
+				maxOccurs="unbounded"></xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:element name="apparel" type="tns:apparelType"></xsd:element>
+
+</xsd:schema>

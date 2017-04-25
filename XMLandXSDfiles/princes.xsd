@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.com.epam/trjava/treasures/princess"
+	xmlns:tns="http://www.com.epam/trjava/treasures/princess"
+	elementFormDefault="qualified" attributeFormDefault="qualified">
+
+	<xsd:complexType name="prsType">
+		<xsd:sequence>
+			<xsd:element name="age" type="xsd:int"></xsd:element>
+			<xsd:element name="name" type="xsd:string"></xsd:element>
+			<xsd:element name="damnation" type="xsd:string"></xsd:element>
+			<xsd:element name="birthPlace" type="xsd:string"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:int" use="required" />
+	</xsd:complexType>
+
+	<xsd:complexType name="princessType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="princes" type="tns:prsType"
+				minOccurs="0" maxOccurs="unbounded"></xsd:element>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:element name="princess" type="tns:princessType"></xsd:element>
+
+</xsd:schema>
